@@ -1,9 +1,13 @@
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__))) 
 import re
 import collections
 from osgeo import gdal, osr
-from episg import *
 from itertools import zip_longest
 import numpy as np
+from episg import *
+
 
 def getcoords(transects):
     if type(transects[0]) == tuple:
