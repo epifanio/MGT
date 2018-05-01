@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>resources/icons/Grass_GIS.svg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>563</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MGT - Marine Geomorphometric Toolbox</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>563</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionPreferences"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuGradient_Metrics">
+    <property name="title">
+     <string>Gradient Metrics</string>
+    </property>
+    <widget class="QMenu" name="menuDirectionality">
+     <property name="title">
+      <string>Directionality</string>
+     </property>
+     <addaction name="actionClassify_Aspect"/>
+     <addaction name="actionLinear_Aspect"/>
+     <addaction name="actionMean_Slope"/>
+    </widget>
+    <widget class="QMenu" name="menuStatistics">
+     <property name="title">
+      <string>Statistics</string>
+     </property>
+     <addaction name="actionCorrelation"/>
+     <addaction name="actionDeviation_from_trend"/>
+     <addaction name="actionGaussian_Smoothing"/>
+     <addaction name="actionInvert"/>
+     <addaction name="actionLocal_deviation_from_global"/>
+     <addaction name="actionMoments"/>
+     <addaction name="actionNormal"/>
+     <addaction name="actionSlope_Impedence"/>
+     <addaction name="actionSobel_Gradient"/>
+     <addaction name="actionTransformation"/>
+    </widget>
+    <widget class="QMenu" name="menuSurface_Texture">
+     <property name="title">
+      <string>Surface Texture</string>
+     </property>
+     <addaction name="actionDissection"/>
+     <addaction name="actionLandform"/>
+     <addaction name="actionRoughness"/>
+     <addaction name="actionSlope_Position"/>
+     <addaction name="actionSurface_Area_Ratio"/>
+     <addaction name="actionSurface_Relief_Ratio"/>
+    </widget>
+    <widget class="QMenu" name="menuTemperature_and_Moisture">
+     <property name="title">
+      <string>Temperature and Moisture</string>
+     </property>
+     <addaction name="action2nd_Derivative_Slope"/>
+     <addaction name="actionCompound_Topographic_Index"/>
+     <addaction name="actionHeat_Load_Index"/>
+     <addaction name="actionIntegrated_Moisture_Index"/>
+     <addaction name="actionSite_Exposure_Index"/>
+     <addaction name="actionSlope_Aspect_Transformation"/>
+    </widget>
+    <widget class="QMenu" name="menuUtilities">
+     <property name="title">
+      <string>Utilities</string>
+     </property>
+     <addaction name="actionAngle_Conversion"/>
+     <addaction name="actionClass_Percentage"/>
+     <addaction name="actionNo_Data_Fill"/>
+     <addaction name="actionSieve"/>
+    </widget>
+    <addaction name="menuDirectionality"/>
+    <addaction name="menuStatistics"/>
+    <addaction name="menuSurface_Texture"/>
+    <addaction name="menuTemperature_and_Moisture"/>
+    <addaction name="separator"/>
+    <addaction name="menuUtilities"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuZonal_Statistics">
+    <property name="title">
+     <string>Zonal Statistics</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuModelling">
+    <property name="title">
+     <string>Modelling</string>
+    </property>
+    <addaction name="actionUnsupervised_Classification"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuGradient_Metrics"/>
+   <addaction name="menuZonal_Statistics"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuModelling"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="taskmanager">
+   <property name="windowTitle">
+    <string>Task Manager</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2"/>
+  </widget>
+  <action name="actionClassify_Aspect">
+   <property name="text">
+    <string>Classify Aspect</string>
+   </property>
+  </action>
+  <action name="actionLinear_Aspect">
+   <property name="text">
+    <string>Linear Aspect</string>
+   </property>
+  </action>
+  <action name="actionMean_Slope">
+   <property name="text">
+    <string>Mean Slope</string>
+   </property>
+  </action>
+  <action name="actionCorrelation">
+   <property name="text">
+    <string>Correlation</string>
+   </property>
+  </action>
+  <action name="actionDeviation_from_trend">
+   <property name="text">
+    <string>Deviation from Trend</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Smoothing">
+   <property name="text">
+    <string>Gaussian Smoothing</string>
+   </property>
+  </action>
+  <action name="actionInvert">
+   <property name="text">
+    <string>Invert</string>
+   </property>
+  </action>
+  <action name="actionLocal_deviation_from_global">
+   <property name="text">
+    <string>Local Deviation from Global</string>
+   </property>
+  </action>
+  <action name="actionMoments">
+   <property name="text">
+    <string>Moments</string>
+   </property>
+  </action>
+  <action name="actionNormal">
+   <property name="text">
+    <string>Normal</string>
+   </property>
+  </action>
+  <action name="actionSlope_Impedence">
+   <property name="text">
+    <string>Slope Impedence</string>
+   </property>
+  </action>
+  <action name="actionSobel_Gradient">
+   <property name="text">
+    <string>Sobel Gradient</string>
+   </property>
+  </action>
+  <action name="actionTransformation">
+   <property name="text">
+    <string>Transformations</string>
+   </property>
+  </action>
+  <action name="actionDissection">
+   <property name="text">
+    <string>Dissection</string>
+   </property>
+  </action>
+  <action name="actionLandform">
+   <property name="text">
+    <string>Landform</string>
+   </property>
+  </action>
+  <action name="actionRoughness">
+   <property name="text">
+    <string>Roughness</string>
+   </property>
+  </action>
+  <action name="actionSlope_Position">
+   <property name="text">
+    <string>Slope Position</string>
+   </property>
+  </action>
+  <action name="actionSurface_Area_Ratio">
+   <property name="text">
+    <string>Surface Area Ratio</string>
+   </property>
+  </action>
+  <action name="actionSurface_Relief_Ratio">
+   <property name="text">
+    <string>Surface Relief Ratio</string>
+   </property>
+  </action>
+  <action name="action2nd_Derivative_Slope">
+   <property name="text">
+    <string>2nd Derivative Slope</string>
+   </property>
+  </action>
+  <action name="actionCompound_Topographic_Index">
+   <property name="text">
+    <string>Compound Topographic Index</string>
+   </property>
+  </action>
+  <action name="actionHeat_Load_Index">
+   <property name="text">
+    <string>Heat Load Index</string>
+   </property>
+  </action>
+  <action name="actionIntegrated_Moisture_Index">
+   <property name="text">
+    <string>Integrated Moisture Index</string>
+   </property>
+  </action>
+  <action name="actionSite_Exposure_Index">
+   <property name="text">
+    <string>Site Exposure Index</string>
+   </property>
+  </action>
+  <action name="actionSlope_Aspect_Transformation">
+   <property name="text">
+    <string>Slope Aspect Transformation</string>
+   </property>
+  </action>
+  <action name="actionAngle_Conversion">
+   <property name="text">
+    <string>Angle Conversion</string>
+   </property>
+  </action>
+  <action name="actionClass_Percentage">
+   <property name="text">
+    <string>Class Percentage</string>
+   </property>
+  </action>
+  <action name="actionNo_Data_Fill">
+   <property name="text">
+    <string>No-Data Fill</string>
+   </property>
+  </action>
+  <action name="actionSieve">
+   <property name="text">
+    <string>Sieve</string>
+   </property>
+  </action>
+  <action name="actionUnsupervised_Classification">
+   <property name="text">
+    <string>Unsupervised Classification</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences...</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
